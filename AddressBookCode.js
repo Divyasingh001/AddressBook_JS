@@ -51,7 +51,7 @@ function contactDetails(firstName,lastName,address,state,city,zipCode,email,phon
     const zipCodePattern = /^[0-9]{6}/;
     let zipCode_Check = zipCodePattern.test(zipCode) ;
 
-    const emailPattern = /^[A-Za-z0-9]+(.[A-Za-z0-9]+)@[^\\W]+(.[^\\W]+)?(?=(.[^_\\W]{3,}$|.[a-zA-Z]{2}$)).$/;
+    const emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
     let email_Check = emailPattern.test(email);
 
     const phoneNumberPattern = /^[0-9]{10}/;
@@ -70,3 +70,7 @@ function contactDetails(firstName,lastName,address,state,city,zipCode,email,phon
         }
     }   
 }
+
+//UC3 
+contactDetails('Divya', 'Singh', 'Home', 'Uttar Pradesh', 'Varanasi', "211007", 'Divya@gmail.com', "9842532525");
+console.log(addressBook);
