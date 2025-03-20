@@ -22,7 +22,9 @@ class Contact{
     }
 }
 
-//UC-2
+//UC2
+var addressBook = new Array();
+
 function contactDetails(firstName,lastName,address,state,city,zipCode,email,phoneNumber){
     
     //checking duplicate
@@ -33,7 +35,6 @@ function contactDetails(firstName,lastName,address,state,city,zipCode,email,phon
     }else{
         const firstNamePattern = /^[A-Z][a-zA-Z]{3,}/;
     let firstName_Check = firstNamePattern.test(firstName);
-    
 
     const lastNamePattern = /^[A-Z][a-zA-Z]{3,}/;
     let lastName_Check = lastNamePattern.test(lastName);
